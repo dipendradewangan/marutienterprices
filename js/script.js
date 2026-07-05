@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-link");
 
     /*================================================================================================================================
-          Sticky Header
-      ================================================================================================================================*/
+            Sticky Header
+        ================================================================================================================================*/
 
     const handleScroll = () => {
         if (window.scrollY > 30) {
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll);
 
     /*================================================================================================================================
-          Mobile Menu
-      ================================================================================================================================*/
+            Mobile Menu
+        ================================================================================================================================*/
 
     function openMenu() {
         mobileNav.classList.add("active");
@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener("click", closeMobileMenu);
 
     /*================================================================================================================================
-          Mobile Dropdown
-      ================================================================================================================================*/
+            Mobile Dropdown
+        ================================================================================================================================*/
 
     const dropdownButtons = document.querySelectorAll(".mobile-dropdown-btn");
 
@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-          Close Menu After Click
-      ================================================================================================================================*/
+            Close Menu After Click
+        ================================================================================================================================*/
 
     mobileLinks.forEach((link) => {
         link.addEventListener("click", () => {
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-          Smooth Scroll
-      ================================================================================================================================*/
+            Smooth Scroll
+        ================================================================================================================================*/
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-          Active Menu Highlight
-      ================================================================================================================================*/
+            Active Menu Highlight
+        ================================================================================================================================*/
 
     function highlightActiveSection() {
         const sections = document.querySelectorAll("section[id]");
@@ -138,8 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
     highlightActiveSection();
 
     /*================================================================================================================================
-          Escape Key Close
-      ================================================================================================================================*/
+            Escape Key Close
+        ================================================================================================================================*/
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     /*================================================================================================================================
-                  Animated Counter
-      ================================================================================================================================*/
+                    Animated Counter
+        ================================================================================================================================*/
 
     const counters = document.querySelectorAll(".counter");
 
@@ -199,8 +199,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-                  Hero Image Parallax
-      ================================================================================================================================*/
+                    Hero Image Parallax
+        ================================================================================================================================*/
 
     const heroImage = document.querySelector(".hero-image");
 
@@ -223,8 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /*================================================================================================================================
-              Floating Card Hover Effect
-      ================================================================================================================================*/
+                Floating Card Hover Effect
+        ================================================================================================================================*/
 
     const cards = document.querySelectorAll(".floating-card");
 
@@ -239,8 +239,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-              Ripple Effect Buttons
-      ================================================================================================================================*/
+                Ripple Effect Buttons
+        ================================================================================================================================*/
 
     const buttons = document.querySelectorAll(".btn-primary,.btn-secondary");
 
@@ -264,8 +264,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*================================================================================================================================
-              Scroll Down Button
-      ================================================================================================================================*/
+                Scroll Down Button
+        ================================================================================================================================*/
 
     const scrollBtn = document.querySelector(".scroll-down");
 
@@ -283,3 +283,143 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// /*==================================================
+//             TESTIMONIAL SLIDER
+// ==================================================*/
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const track = document.querySelector(".testimonial-track");
+//     const cards = document.querySelectorAll(".testimonial-card");
+
+//     const prevBtn = document.querySelector(".testimonial-prev");
+//     const nextBtn = document.querySelector(".testimonial-next");
+
+//     const dots = document.querySelectorAll(".testimonial-dots .dot");
+
+//     if (!track || cards.length === 0) return;
+
+//     let currentIndex = 0;
+
+//     const totalSlides = cards.length;
+
+//     /*====================================
+//               Update Slider
+//       ====================================*/
+
+//     function updateSlider() {
+//         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+//         cards.forEach((card, index) => {
+//             card.classList.toggle("active", index === currentIndex);
+//         });
+
+//         dots.forEach((dot, index) => {
+//             dot.classList.toggle("active", index === currentIndex);
+//         });
+//     }
+
+//     /*====================================
+//               Next Slide
+//       ====================================*/
+
+//     function nextSlide() {
+//         currentIndex++;
+
+//         if (currentIndex >= totalSlides) {
+//             currentIndex = 0;
+//         }
+
+//         updateSlider();
+//     }
+
+//     /*====================================
+//               Previous Slide
+//       ====================================*/
+
+//     function prevSlide() {
+//         currentIndex--;
+
+//         if (currentIndex < 0) {
+//             currentIndex = totalSlides - 1;
+//         }
+
+//         updateSlider();
+//     }
+
+//     /*====================================
+//               Button Events
+//       ====================================*/
+
+//     if (nextBtn) {
+//         nextBtn.addEventListener("click", nextSlide);
+//     }
+
+//     if (prevBtn) {
+//         prevBtn.addEventListener("click", prevSlide);
+//     }
+
+//     /*====================================
+//               Dot Navigation
+//       ====================================*/
+
+//     dots.forEach((dot, index) => {
+//         dot.addEventListener("click", () => {
+//             currentIndex = index;
+
+//             updateSlider();
+//         });
+//     });
+
+//     /*====================================
+//               Auto Slide
+//       ====================================*/
+
+//     let autoSlide = setInterval(nextSlide, 5000);
+
+//     /*====================================
+//               Pause on Hover
+//       ====================================*/
+
+//     const slider = document.querySelector(".testimonial-slider");
+
+//     if (slider) {
+//         slider.addEventListener("mouseenter", () => {
+//             clearInterval(autoSlide);
+//         });
+
+//         slider.addEventListener("mouseleave", () => {
+//             autoSlide = setInterval(nextSlide, 5000);
+//         });
+//     }
+
+//     /*====================================
+//               Touch Swipe (Mobile)
+//       ====================================*/
+
+//     let startX = 0;
+
+//     let endX = 0;
+
+//     track.addEventListener("touchstart", (e) => {
+//         startX = e.touches[0].clientX;
+//     });
+
+//     track.addEventListener("touchend", (e) => {
+//         endX = e.changedTouches[0].clientX;
+
+//         if (startX - endX > 50) {
+//             nextSlide();
+//         }
+
+//         if (endX - startX > 50) {
+//             prevSlide();
+//         }
+//     });
+
+//     /*====================================
+//               Initialize
+//       ====================================*/
+
+//     updateSlider();
+// });
