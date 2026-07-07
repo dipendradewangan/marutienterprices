@@ -5500,3 +5500,1836 @@ html[data-theme="dark"] .verified {
     font-size: 14px;
 
 }
+
+
+
+
+/*==================================================
+                CTA SECTION - PART 1
+==================================================*/
+
+.cta-section {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background: linear-gradient(135deg,
+            #15803d,
+            #16a34a,
+            #22c55e);
+
+}
+
+/*====================================
+        Background Decoration
+====================================*/
+
+.cta-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    top: -220px;
+
+    left: -180px;
+
+    filter: blur(80px);
+
+}
+
+.cta-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    right: -150px;
+
+    bottom: -150px;
+
+    filter: blur(80px);
+
+}
+
+.cta-section .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*====================================
+        Wrapper
+====================================*/
+
+.cta-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+/*====================================
+        Content
+====================================*/
+
+.cta-content {
+
+    max-width: 700px;
+
+}
+
+.cta-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: #fff;
+
+    backdrop-filter: blur(10px);
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+
+}
+
+.cta-content h2 {
+
+    font-size: 3.4rem;
+
+    line-height: 1.25;
+
+    color: #fff;
+
+    margin-bottom: 25px;
+
+}
+
+.cta-content h2 span {
+
+    color: #fef08a;
+
+}
+
+.cta-content p {
+
+    color: rgba(255, 255, 255, .92);
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+}
+
+
+
+/*==================================================
+            CTA SECTION - PART 2
+        Buttons | Animation | Responsive
+==================================================*/
+
+/*====================================
+        Buttons
+====================================*/
+
+.cta-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.cta-buttons .btn-primary {
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    border: 2px solid #ffffff;
+
+    min-width: 230px;
+
+    justify-content: center;
+
+}
+
+.cta-buttons .btn-primary:hover {
+
+    background: transparent;
+
+    color: #ffffff;
+
+    border-color: #ffffff;
+
+}
+
+.cta-buttons .btn-secondary {
+
+    background: transparent;
+
+    color: #ffffff;
+
+    border: 2px solid rgba(255, 255, 255, .4);
+
+    min-width: 200px;
+
+    justify-content: center;
+
+}
+
+.cta-buttons .btn-secondary:hover {
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    border-color: #ffffff;
+
+}
+
+.cta-buttons a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: all .35s ease;
+
+}
+
+.cta-buttons a i {
+
+    transition: .35s ease;
+
+}
+
+.cta-buttons a:hover i {
+
+    transform: translateX(5px);
+
+}
+
+/*====================================
+        Floating Animation
+====================================*/
+
+.cta-content {
+
+    animation: fadeLeft .8s ease;
+
+}
+
+.cta-buttons {
+
+    animation: fadeRight .8s ease;
+
+}
+
+.cta-badge {
+
+    animation: ctaFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes ctaFloat {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-6px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/*====================================
+        Hover Glow
+====================================*/
+
+.cta-wrapper {
+
+    position: relative;
+
+}
+
+.cta-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    right: 50px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    filter: blur(60px);
+
+    z-index: -1;
+
+}
+
+/*====================================
+        Responsive
+====================================*/
+
+@media(max-width:992px) {
+
+    .cta-section {
+
+        padding: 90px 0;
+
+    }
+
+    .cta-wrapper {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .cta-buttons {
+
+        justify-content: center;
+
+    }
+
+    .cta-content h2 {
+
+        font-size: 2.8rem;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .cta-content h2 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .cta-content p {
+
+        font-size: 1rem;
+
+    }
+
+    .cta-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+    .cta-buttons a {
+
+        width: 100%;
+
+        max-width: 340px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .cta-section {
+
+        padding: 70px 0;
+
+    }
+
+    .cta-content h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .cta-badge {
+
+        font-size: .85rem;
+
+    }
+
+    .cta-buttons a {
+
+        padding: 15px 22px;
+
+    }
+
+}
+
+
+/*==================================================
+                    FAQ SECTION - PART 1
+==================================================*/
+
+.faq {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background: var(--bg);
+
+    overflow: hidden;
+
+}
+
+/*====================================
+            FAQ Wrapper
+====================================*/
+
+.faq-wrapper {
+
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+/*====================================
+            FAQ Item
+====================================*/
+
+.faq-item {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .35s ease;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.faq-item:hover {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 20px 40px rgba(34, 197, 94, .12);
+
+}
+
+/*====================================
+            Question
+====================================*/
+
+.faq-question {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 24px 30px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    color: var(--text);
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    transition: .35s ease;
+
+}
+
+.faq-question span {
+
+    flex: 1;
+
+    padding-right: 20px;
+
+}
+
+.faq-question i {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(34, 197, 94, .12);
+
+    color: var(--primary);
+
+    transition: .35s ease;
+
+}
+
+/*====================================
+            Active Item
+====================================*/
+
+.faq-item.active {
+
+    border-color: var(--primary);
+
+}
+
+.faq-item.active .faq-question {
+
+    color: var(--primary);
+
+}
+
+.faq-item.active .faq-question i {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    transform: rotate(45deg);
+
+}
+
+/*====================================
+            Answer
+====================================*/
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .45s ease;
+
+}
+
+.faq-answer p {
+
+    padding: 0 30px 25px;
+
+    color: var(--text-light);
+
+    line-height: 1.9;
+
+}
+
+
+
+/*==================================================
+                FAQ SECTION - PART 2
+==================================================*/
+
+/*====================================
+        Background Glow
+====================================*/
+
+.faq::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, .06);
+
+    top: -180px;
+
+    left: -180px;
+
+    filter: blur(90px);
+
+}
+
+.faq::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(250, 204, 21, .08);
+
+    right: -120px;
+
+    bottom: -120px;
+
+    filter: blur(90px);
+
+}
+
+.faq .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*====================================
+        Hover Effects
+====================================*/
+
+.faq-item:hover .faq-question i {
+
+    transform: scale(1.1);
+
+}
+
+.faq-item.active .faq-answer {
+
+    max-height: 250px;
+
+}
+
+.faq-item.active .faq-question {
+
+    background: rgba(34, 197, 94, .05);
+
+}
+
+/*====================================
+        Card Animation
+====================================*/
+
+.faq-item {
+
+    animation: fadeUp .8s ease both;
+
+}
+
+.faq-item:nth-child(2) {
+
+    animation-delay: .1s;
+
+}
+
+.faq-item:nth-child(3) {
+
+    animation-delay: .2s;
+
+}
+
+.faq-item:nth-child(4) {
+
+    animation-delay: .3s;
+
+}
+
+.faq-item:nth-child(5) {
+
+    animation-delay: .4s;
+
+}
+
+.faq-item:nth-child(6) {
+
+    animation-delay: .5s;
+
+}
+
+/*====================================
+        Responsive
+====================================*/
+
+@media(max-width:992px) {
+
+    .faq {
+
+        padding: 90px 0;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .faq-wrapper {
+
+        margin-top: 50px;
+
+    }
+
+    .faq-question {
+
+        padding: 20px;
+
+        font-size: 1rem;
+
+    }
+
+    .faq-answer p {
+
+        padding: 0 20px 20px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .faq {
+
+        padding: 70px 0;
+
+    }
+
+    .faq-question {
+
+        padding: 18px;
+
+        font-size: .95rem;
+
+    }
+
+    .faq-question i {
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 14px;
+
+    }
+
+    .faq-answer p {
+
+        font-size: .92rem;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+
+
+
+/*==================================================
+                CONTACT SECTION - PART 1
+==================================================*/
+
+.contact {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background: linear-gradient(180deg,
+            var(--bg),
+            rgba(34, 197, 94, .03));
+
+    overflow: hidden;
+
+}
+
+/*====================================
+        Background Glow
+====================================*/
+
+.contact::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    left: -180px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, .08);
+
+    filter: blur(90px);
+
+}
+
+.contact::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    right: -120px;
+
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(250, 204, 21, .08);
+
+    filter: blur(90px);
+
+}
+
+.contact .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*====================================
+        Wrapper
+====================================*/
+
+.contact-wrapper {
+
+    display: grid;
+
+    grid-template-columns: 420px 1fr;
+
+    gap: 50px;
+
+    margin-top: 70px;
+
+    align-items: start;
+
+}
+
+/*====================================
+        Contact Info
+====================================*/
+
+.contact-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+/*====================================
+        Contact Card
+====================================*/
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    transition: .35s ease;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .05);
+
+}
+
+.contact-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--primary);
+
+    box-shadow: 0 20px 45px rgba(34, 197, 94, .12);
+
+}
+
+/*====================================
+        Icon
+====================================*/
+
+.contact-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(34, 197, 94, .12);
+
+    color: var(--primary);
+
+    font-size: 24px;
+
+    transition: .35s ease;
+
+}
+
+.contact-card:hover .contact-icon {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    transform: rotate(10deg);
+
+}
+
+/*====================================
+        Contact Text
+====================================*/
+
+.contact-card h3 {
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+
+    font-size: 1.15rem;
+
+}
+
+.contact-card p {
+
+    color: var(--text-light);
+
+    line-height: 1.7;
+
+}
+
+
+
+/*==================================================
+                CONTACT SECTION - PART 2
+        Form | Hover | Responsive
+==================================================*/
+
+/*====================================
+        Contact Form
+====================================*/
+
+.contact-form-box {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .06);
+
+    transition: .35s ease;
+
+}
+
+.contact-form-box:hover {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 25px 60px rgba(34, 197, 94, .12);
+
+}
+
+/*====================================
+        Form
+====================================*/
+
+.contact-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+}
+
+.form-group {
+
+    width: 100%;
+
+}
+
+/*====================================
+        Inputs
+====================================*/
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: .3s ease;
+
+    font-family: inherit;
+
+}
+
+.contact-form textarea {
+
+    resize: vertical;
+
+    min-height: 160px;
+
+}
+
+/*====================================
+        Placeholder
+====================================*/
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+    color: var(--text-light);
+
+}
+
+/*====================================
+        Focus
+====================================*/
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, .12);
+
+}
+
+/*====================================
+        Button
+====================================*/
+
+.contact-form .btn-primary {
+
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 18px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    border-radius: 50px;
+
+    transition: .35s ease;
+
+}
+
+.contact-form .btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 20px 40px rgba(34, 197, 94, .25);
+
+}
+
+.contact-form .btn-primary i {
+
+    margin-right: 10px;
+
+}
+
+/*====================================
+        Form Animation
+====================================*/
+
+.contact-form-box {
+
+    animation: fadeRight .8s ease both;
+
+}
+
+.contact-info {
+
+    animation: fadeLeft .8s ease both;
+
+}
+
+/*====================================
+        Responsive
+====================================*/
+
+@media(max-width:992px) {
+
+    .contact {
+
+        padding: 90px 0;
+
+    }
+
+    .contact-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .contact-form-box {
+
+        padding: 30px;
+
+    }
+
+    .contact-card {
+
+        padding: 20px;
+
+    }
+
+    .contact-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 20px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .contact {
+
+        padding: 70px 0;
+
+    }
+
+    .contact-form-box {
+
+        padding: 22px;
+
+        border-radius: 20px;
+
+    }
+
+    .contact-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+
+        padding: 14px 16px;
+
+        font-size: .95rem;
+
+    }
+
+    .contact-form .btn-primary {
+
+        padding: 16px;
+
+    }
+
+}
+
+
+
+
+
+/*==================================================
+                FOOTER - PART 1
+==================================================*/
+
+.footer {
+
+    position: relative;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    padding: 90px 0 30px;
+
+    overflow: hidden;
+
+}
+
+/*====================================
+        Background Glow
+====================================*/
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    left: -220px;
+
+    top: -220px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, .08);
+
+    filter: blur(100px);
+
+}
+
+.footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    right: -120px;
+
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(250, 204, 21, .06);
+
+    filter: blur(90px);
+
+}
+
+.footer .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*====================================
+        Grid
+====================================*/
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+
+}
+
+/*====================================
+        Logo
+====================================*/
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+}
+
+.footer-logo i {
+
+    color: var(--primary);
+
+}
+
+.footer-logo span {
+
+    color: var(--primary);
+
+}
+
+/*====================================
+        About
+====================================*/
+
+.footer-column p {
+
+    color: #94a3b8;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+
+}
+
+/*====================================
+        Heading
+====================================*/
+
+.footer-column h3 {
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+    font-size: 1.25rem;
+
+    position: relative;
+
+}
+
+.footer-column h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 45px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+}
+
+/*====================================
+        Links
+====================================*/
+
+.footer-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+.footer-column ul li {
+
+    margin-bottom: 15px;
+
+}
+
+.footer-column ul li a {
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+.footer-column ul li a:hover {
+
+    color: #22c55e;
+
+    padding-left: 8px;
+
+}
+
+
+
+/*==================================================
+                FOOTER - PART 1
+==================================================*/
+
+.footer {
+
+    position: relative;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    padding: 90px 0 30px;
+
+    overflow: hidden;
+
+}
+
+/*====================================
+        Background Glow
+====================================*/
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    left: -220px;
+
+    top: -220px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, .08);
+
+    filter: blur(100px);
+
+}
+
+.footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    right: -120px;
+
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(250, 204, 21, .06);
+
+    filter: blur(90px);
+
+}
+
+.footer .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*====================================
+        Grid
+====================================*/
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+
+}
+
+/*====================================
+        Logo
+====================================*/
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+}
+
+.footer-logo i {
+
+    color: var(--primary);
+
+}
+
+.footer-logo span {
+
+    color: var(--primary);
+
+}
+
+/*====================================
+        About
+====================================*/
+
+.footer-column p {
+
+    color: #94a3b8;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+
+}
+
+/*====================================
+        Heading
+====================================*/
+
+.footer-column h3 {
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+    font-size: 1.25rem;
+
+    position: relative;
+
+}
+
+.footer-column h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 45px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+}
+
+/*====================================
+        Links
+====================================*/
+
+.footer-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+.footer-column ul li {
+
+    margin-bottom: 15px;
+
+}
+
+.footer-column ul li a {
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+.footer-column ul li a:hover {
+
+    color: #22c55e;
+
+    padding-left: 8px;
+
+}
+
+
+
+/*==================================================
+            FLOATING BUTTONS - PART 1
+==================================================*/
+
+.floating-buttons{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    z-index:9999;
+
+}
+
+/*====================================
+        Common Button
+====================================*/
+
+.floating-btn{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:24px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    transition:all .35s ease;
+
+}
+
+/*====================================
+        WhatsApp
+====================================*/
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+    box-shadow:0 20px 40px rgba(37,211,102,.35);
+
+}
+
+/*====================================
+        Call
+====================================*/
+
+.call-btn{
+
+    background:#2563eb;
+
+}
+
+.call-btn:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+    box-shadow:0 20px 40px rgba(37,99,235,.35);
+
+}
+
+/*====================================
+        Back To Top
+====================================*/
+
+.top-btn{
+
+    background:var(--primary);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px);
+
+}
+
+.top-btn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.top-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(34,197,94,.35);
+
+}
